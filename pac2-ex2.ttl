@@ -7,9 +7,7 @@
 @base <http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/> .
 
 <http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating> rdf:type owl:Ontology ;
-                                                                    rdfs:comment """This ontology is related to flight satisfaction surveys. Its data is extracted from Kaggle and the companies Qatar Airways and Ryanair.
-
-This is a practice exercice for Knowladge Representation subject (Universitat Oberta de Catalunya)."""@en .
+                                                                    rdfs:comment "This ontology is related to flight satisfaction surveys. Its data is extracted from Kaggle and the companies Qatar Airways and Ryanair. This is a practice exercice for Knowladge Representation subject (Universitat Oberta de Catalunya)."@en .
 
 #################################################################
 #    Annotation properties
@@ -23,7 +21,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#answeredBy
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/answeredBy
 :answeredBy rdf:type owl:ObjectProperty ;
             owl:inverseOf :hasAnswered ;
             rdfs:domain :Review ;
@@ -32,7 +30,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
             rdfs:label "answeredBy"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#flownWith
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/flownWith
 :flownWith rdf:type owl:ObjectProperty ;
            owl:inverseOf :hasPassenger ;
            rdfs:domain :Passenger ;
@@ -41,7 +39,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
            rdfs:label "flownWith"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasAircraft
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasAircraft
 :hasAircraft rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :hasInformation ;
              rdfs:domain :Flight ;
@@ -50,7 +48,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
              rdfs:label "hasAircraft"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasAirline
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasAirline
 :hasAirline rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasInformation ;
             rdfs:domain :Flight ;
@@ -59,7 +57,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
             rdfs:label "hasAirline"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasAnswered
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasAnswered
 :hasAnswered rdf:type owl:ObjectProperty ;
              rdfs:domain :Passenger ;
              rdfs:range :Review ;
@@ -67,7 +65,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
              rdfs:label "hasAnswered"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasDestination
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasDestination
 :hasDestination rdf:type owl:ObjectProperty ;
                 rdfs:domain :Flight ;
                 rdfs:range :Location ;
@@ -76,7 +74,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                 rdfs:label "hasDestination"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasInformation
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasInformation
 :hasInformation rdf:type owl:ObjectProperty ;
                 rdfs:domain :Flight ;
                 rdfs:range :FlightInformation ;
@@ -84,7 +82,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                 rdfs:label "hasInformation"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasOrigin
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasOrigin
 :hasOrigin rdf:type owl:ObjectProperty ;
            rdfs:domain :Flight ;
            rdfs:range :Location ;
@@ -92,7 +90,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
            rdfs:label "hasOrigin"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasPassage
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasPassage
 :hasPassage rdf:type owl:ObjectProperty ;
             rdfs:domain :Passenger ;
             rdfs:range :Passage ;
@@ -100,7 +98,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
             rdfs:label "hasPassage"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasPassenger
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasPassenger
 :hasPassenger rdf:type owl:ObjectProperty ;
               rdfs:domain :Flight ;
               rdfs:range :Passenger ;
@@ -108,7 +106,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
               rdfs:label "hasPassenger"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#hasSeat
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/hasSeat
 :hasSeat rdf:type owl:ObjectProperty ;
          rdfs:subPropertyOf :hasPassage ;
          rdfs:domain :Passenger ;
@@ -117,7 +115,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
          rdfs:label "hasSeat"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#isFrom
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/isFrom
 :isFrom rdf:type owl:ObjectProperty ;
         rdfs:domain :Passenger ;
         rdfs:range :Country ;
@@ -125,7 +123,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
         rdfs:label "isFrom"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#isPassengerType
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/isPassengerType
 :isPassengerType rdf:type owl:ObjectProperty ;
                  rdfs:subPropertyOf :hasPassage ;
                  rdfs:domain :Passenger ;
@@ -134,7 +132,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                  rdfs:label "isPassengerType"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#isVerified
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/isVerified
 :isVerified rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :hasPassage ;
             rdfs:domain :Passenger ;
@@ -146,7 +144,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #    Data properties
 #################################################################
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#comment
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/comment
 :comment rdf:type owl:DatatypeProperty ;
          rdfs:domain :Review ;
          rdfs:range xsd:string ;
@@ -154,7 +152,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
          rdfs:label "comment"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#connections
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/connections
 :connections rdf:type owl:DatatypeProperty ;
              rdfs:domain :Flight ;
              rdfs:range [ rdf:type rdfs:Datatype ;
@@ -167,7 +165,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
              rdfs:label "connections"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#dateFlown
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/dateFlown
 :dateFlown rdf:type owl:DatatypeProperty ;
            rdfs:domain :Flight ;
            rdfs:range xsd:dateTime ;
@@ -175,7 +173,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
            rdfs:label "dateFlown"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#datePublished
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/datePublished
 :datePublished rdf:type owl:DatatypeProperty ;
                rdfs:domain :Review ;
                rdfs:range xsd:dateTime ;
@@ -183,7 +181,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                rdfs:label "datePublished"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#isRecommended
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/isRecommended
 :isRecommended rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf owl:topDataProperty ;
                rdfs:domain :Review ;
@@ -199,7 +197,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                rdfs:label "isRecommended"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#name
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/name
 :name rdf:type owl:DatatypeProperty ;
       rdfs:subPropertyOf owl:topDataProperty ;
       rdfs:domain :Passenger ;
@@ -208,7 +206,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
       rdfs:label "name"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#rating
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/rating
 :rating rdf:type owl:DatatypeProperty ;
         rdfs:domain :Review ;
         rdfs:range [ rdf:type rdfs:Datatype ;
@@ -223,7 +221,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
         rdfs:label "rating"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#title
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/title
 :title rdf:type owl:DatatypeProperty ;
        rdfs:domain :Review ;
        rdfs:range xsd:string ;
@@ -235,43 +233,43 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Aircraft
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Aircraft
 :Aircraft rdf:type owl:Class ;
           rdfs:subClassOf :FlightInformation ;
           rdfs:comment "The aircraft that operates one or more flights" ;
           rdfs:label "Aircraft"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Airline
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Airline
 :Airline rdf:type owl:Class ;
          rdfs:subClassOf :FlightInformation ;
          rdfs:comment "The airline that operates different flights"@en ;
          rdfs:label "Airline"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Business
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Business
 :Business rdf:type owl:Class ;
           rdfs:subClassOf :PassengerType .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#BusinessClass
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/BusinessClass
 :BusinessClass rdf:type owl:Class ;
                rdfs:subClassOf :Seat .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Country
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Country
 :Country rdf:type owl:Class ;
          rdfs:comment "The country, currently this is related to passanger only, but in long term it could be related to other entites, like location, airline..."@en ;
          rdfs:label "Country"@en ;
          rdfs:sameAs "https://dbpedia.org/ontology/country"^^xsd:anyURI .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#CoupleLeisure
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/CoupleLeisure
 :CoupleLeisure rdf:type owl:Class ;
                rdfs:subClassOf :PassengerType .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#DirectFlight
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/DirectFlight
 :DirectFlight rdf:type owl:Class ;
               rdfs:subClassOf :Flight ;
               owl:disjointWith :TransitFlight ;
@@ -279,22 +277,22 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
               rdfs:label "DirectFlight"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#EconomyClass
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/EconomyClass
 :EconomyClass rdf:type owl:Class ;
               rdfs:subClassOf :Seat .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#FamilyLeisure
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/FamilyLeisure
 :FamilyLeisure rdf:type owl:Class ;
                rdfs:subClassOf :PassengerType .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#FirstClass
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/FirstClass
 :FirstClass rdf:type owl:Class ;
             rdfs:subClassOf :Seat .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Flight
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Flight
 :Flight rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :hasInformation ;
@@ -335,46 +333,46 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
         rdfs:label "Flight"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#FlightInformation
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/FlightInformation
 :FlightInformation rdf:type owl:Class ;
                    rdfs:comment "The flight detailed information, like the aircraft that operated the flight, the airline that operates the flight..."@en ;
                    rdfs:label "FlightInformation"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Location
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Location
 :Location rdf:type owl:Class ;
           rdfs:comment "Location data. Currently, it's related to the origin and destination of a flight, but it can be related with other entites in the future, like the passenger data, the diferent stops of a transit flight..."@en ;
           rdfs:label "Location" ;
           rdfs:sameAs "https://dbpedia.org/ontology/Location"^^xsd:anyURI .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#NotRecommended
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/NotRecommended
 :NotRecommended rdf:type owl:Class ;
                 rdfs:subClassOf :Review ;
                 rdfs:comment "The result of the review is flight not recommended by the passenger. Equivalent to isRecommended equal 0"@en ;
                 rdfs:label "NotRecommended"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#NotSatisfiedPassenger
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/NotSatisfiedPassenger
 :NotSatisfiedPassenger rdf:type owl:Class ;
                        rdfs:subClassOf :Satisfaction ;
                        rdfs:comment "The passenger was not satisfied with the flight"@en ;
                        rdfs:label "NotSatisfiedPassenger"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#NotVerified
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/NotVerified
 :NotVerified rdf:type owl:Class ;
              rdfs:subClassOf :Verification ;
              owl:disjointWith :Verified .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Passage
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Passage
 :Passage rdf:type owl:Class ;
          rdfs:comment "Passage info of the passenger"@en ;
          rdfs:label "Passage"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Passenger
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Passenger
 :Passenger rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasPassage ;
@@ -411,32 +409,32 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
            rdfs:sameAs "http://dbpedia.org/ontology/Person"^^xsd:anyURI .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#PassengerType
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/PassengerType
 :PassengerType rdf:type owl:Class ;
                rdfs:subClassOf :Passage ;
                rdfs:comment "The passenger type"@en ;
                rdfs:label "PassengerType"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#PremiumEconomy
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/PremiumEconomy
 :PremiumEconomy rdf:type owl:Class ;
                 rdfs:subClassOf :Seat .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#RecomendationUnknown
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/RecomendationUnknown
 :RecomendationUnknown rdf:type owl:Class ;
                       rdfs:subClassOf :Review ;
                       rdfs:comment "We do not know if the passenger recommended or not the flight. Equivalent to isRecommended equal -1"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Recommended
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Recommended
 :Recommended rdf:type owl:Class ;
              rdfs:subClassOf :Review ;
              rdfs:comment "The result of the review is flight recommended by the passenger. Equivalent to isRecommended equal 1"@en ;
              rdfs:label "Recommended"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Review
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Review
 :Review rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
                           owl:onProperty :answeredBy ;
@@ -447,47 +445,47 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
         rdfs:label "Review"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Satisfaction
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Satisfaction
 :Satisfaction rdf:type owl:Class ;
               rdfs:subClassOf :Passenger ;
               rdfs:comment "Grade of satisfaction of the passenger, based on the review rating value. If the rating is higher or equal than 5, then the passenger is considered as satisifed, otherwise is considered as not satisfied"@en ;
               rdfs:label "Satisfaction"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#SatisfiedPassenger
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/SatisfiedPassenger
 :SatisfiedPassenger rdf:type owl:Class ;
                     rdfs:subClassOf :Satisfaction ;
                     rdfs:comment "The passenger was satisfied with the flight"@en ;
                     rdfs:label "SatisfiedPassenger"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Seat
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Seat
 :Seat rdf:type owl:Class ;
       rdfs:subClassOf :Passage ;
       rdfs:comment "The seat info"@en ;
       rdfs:label "Seat"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#SoloLeisure
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/SoloLeisure
 :SoloLeisure rdf:type owl:Class ;
              rdfs:subClassOf :PassengerType .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#TransitFlight
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/TransitFlight
 :TransitFlight rdf:type owl:Class ;
                rdfs:subClassOf :Flight ;
                rdfs:comment "The flight is transit if the number of connections is greater than 1"@en ;
                rdfs:label "TransitFlight"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Verification
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Verification
 :Verification rdf:type owl:Class ;
               rdfs:subClassOf :Passage ;
               rdfs:comment "Verification represents if the passage was verified or not. If it was not verified, then we do not know if the passenger was a truthly passenger of the flight."@en ;
               rdfs:label "Verification" .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Verified
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Verified
 :Verified rdf:type owl:Class ;
           rdfs:subClassOf :Verification .
 
@@ -496,14 +494,14 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#A380-800
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/A380-800
 :A380-800 rdf:type owl:NamedIndividual ,
                    :Aircraft ;
           rdfs:comment "Aircraft model A380-800"@en ;
           rdfs:label "A380-800"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#AlwaleedAlthaniQAT
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/AlwaleedAlthaniQAT
 :AlwaleedAlthaniQAT rdf:type owl:NamedIndividual ,
                              :Passenger ;
                     :flownWith :DohaLondon-Qatar-Feb2024 ;
@@ -517,36 +515,36 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                     rdfs:label "AlwaleedAlthaniQAT"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Boeing-737-900
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Boeing-737-900
 :Boeing-737-900 rdf:type owl:NamedIndividual ,
                          :Aircraft ;
                 rdfs:comment "Boing aircraft model 737-900"@en ;
                 rdfs:label "Boeing-737-900"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Business
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Business
 :Business rdf:type owl:NamedIndividual ,
                    :Business .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#BusinessClass
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/BusinessClass
 :BusinessClass rdf:type owl:NamedIndividual ,
                         :BusinessClass .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#CoupleLeisure
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/CoupleLeisure
 :CoupleLeisure rdf:type owl:NamedIndividual ,
                         :CoupleLeisure .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Doha
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Doha
 :Doha rdf:type owl:NamedIndividual ,
                :Location ;
       rdfs:comment "Doha location"@en ;
       rdfs:label "Doha"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#DohaLondon-Qatar-Feb2024
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/DohaLondon-Qatar-Feb2024
 :DohaLondon-Qatar-Feb2024 rdf:type owl:NamedIndividual ,
                                    :Flight ;
                           :hasAircraft :A380-800 ;
@@ -559,24 +557,24 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                           rdfs:label "DohaLondon-Qatar-Feb2024"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#EconomyClass
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/EconomyClass
 :EconomyClass rdf:type owl:NamedIndividual ,
                        :EconomyClass .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#FamilyLeisure
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/FamilyLeisure
 :FamilyLeisure rdf:type owl:NamedIndividual ,
                         :FamilyLeisure .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Faro
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Faro
 :Faro rdf:type owl:NamedIndividual ,
                :Location ;
       rdfs:comment "Faro location"@en ;
       rdfs:label "Faro"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#FaroLuton-Ryanair-Feb2024
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/FaroLuton-Ryanair-Feb2024
 :FaroLuton-Ryanair-Feb2024 rdf:type owl:NamedIndividual ,
                                     :Flight ;
                            :hasAircraft :Boeing-737-900 ;
@@ -588,26 +586,26 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                            rdfs:label "FaroLuton-Ryanair-Feb2024"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#FirstClass
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/FirstClass
 :FirstClass rdf:type owl:NamedIndividual ,
                      :FirstClass .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#London
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/London
 :London rdf:type owl:NamedIndividual ,
                  :Location ;
         rdfs:comment "London location"@en ;
         rdfs:label "London"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Luton
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Luton
 :Luton rdf:type owl:NamedIndividual ,
                 :Location ;
        rdfs:comment "Luton location"@en ;
        rdfs:label "Luton"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#MaryLeUK
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/MaryLeUK
 :MaryLeUK rdf:type owl:NamedIndividual ,
                    :Passenger ;
           :flownWith :TokyoLondon-Qatar-Mar2024 ;
@@ -621,12 +619,12 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
           rdfs:label "MaryLeUK"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#NotVerified
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/NotVerified
 :NotVerified rdf:type owl:NamedIndividual ,
                       :NotVerified .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#PassengerRay0UK
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/PassengerRay0UK
 :PassengerRay0UK rdf:type owl:NamedIndividual ,
                           :Passenger ;
                  :flownWith :FaroLuton-Ryanair-Feb2024 ;
@@ -639,45 +637,45 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                  rdfs:label "PassengerRay0UK"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#PremiumEconomy
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/PremiumEconomy
 :PremiumEconomy rdf:type owl:NamedIndividual ,
                          :PremiumEconomy .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Qatar
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Qatar
 :Qatar rdf:type owl:NamedIndividual ,
                 :Country ;
        rdfs:comment "Qatar country"@en ;
        rdfs:label "Qatar"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#QatarAirways
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/QatarAirways
 :QatarAirways rdf:type owl:NamedIndividual ,
                        :Airline ;
               rdfs:comment "Qatar Airways airline"@en ;
               rdfs:label "QatarAirways"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Ryanair
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Ryanair
 :Ryanair rdf:type owl:NamedIndividual ,
                   :Airline ;
          rdfs:comment "Ryanair airline"@en ;
          rdfs:label "Ryanair"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#SoloLeisure
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/SoloLeisure
 :SoloLeisure rdf:type owl:NamedIndividual ,
                       :SoloLeisure .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Tokyo
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Tokyo
 :Tokyo rdf:type owl:NamedIndividual ,
                 :Location ;
        rdfs:comment "Tokyo location"@en ;
        rdfs:label "Tokyo"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#TokyoLondon-Qatar-Mar2024
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/TokyoLondon-Qatar-Mar2024
 :TokyoLondon-Qatar-Mar2024 rdf:type owl:NamedIndividual ,
                                     :Flight ;
                            :hasAirline :QatarAirways ;
@@ -689,19 +687,19 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                            rdfs:label "TokyoLondon-Qatar-Mar2024"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#UnitedKingdom
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/UnitedKingdom
 :UnitedKingdom rdf:type owl:NamedIndividual ,
                         :Country ;
                rdfs:comment "United Kingdom country"@en ;
                rdfs:label "UnitedKingdom"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#Verified
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/Verified
 :Verified rdf:type owl:NamedIndividual ,
                    :Verified .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#review0qat
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/review0qat
 :review0qat rdf:type owl:NamedIndividual ,
                      :Review ;
             :comment "The delay of my flight from Haneda to Doha caused a bit of chaos upon arrival. Despite my efforts to reach the gate promptly, I was denied boarding due to luggage issues, and the lack of assistance added to the frustration. I paid for an Economy Comfort package, which was supposed to include an aisle seat. However, upon boarding, I was informed that no aisle seats were available, despite assurances beforehand. Additionally, my luggage tag was lost during the boarding pass exchange, leading to further uncertainty upon arrival in London. What was meant to be a 19-hour journey turned into a 27-hour ordeal. When I requested assistance from staff regarding a re-arrangement they promised to get back to me within 5-10 minutes, but no one followed up until I reached out again. The security queue at Heathrow on departure from the UK was incredibly long, with a wait time of about 1.5 hours just to get through. Overall, while the crew onboard was courteous and provided great service, the experience was marred by these inconveniences." ;
@@ -713,7 +711,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
             rdfs:label "review0qat"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#review0rya
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/review0rya
 :review0rya rdf:type owl:NamedIndividual ,
                      :Review ;
             :comment "Flew back from Faro to London Luton Friday 2nd February. Ryanair in both directions was bang on time and smooth flights in both directions.  We always sit in Front for more space and this was very comfortable for just under a 3 hour flight. The cabin crew were polite and efficient with nice sense of humour especially and engagement especially Ethan and his female colleague at the front section. For their human touch [unlike sometimes the stand offish BA crews] merit a 10/10 marking" ;
@@ -725,7 +723,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
             rdfs:label "review0rya"@en .
 
 
-###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating#review3qat
+###  http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/review3qat
 :review3qat rdf:type owl:NamedIndividual ,
                      :Review ;
             :comment "We flew on probably the first A380 the airline received but it’s up keep is very good the caviar was excellent and the rack of lamb was perfect the entertainment system though the screens were huge and not very" ;
