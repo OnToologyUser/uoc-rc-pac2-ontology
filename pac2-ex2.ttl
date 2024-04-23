@@ -633,7 +633,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                  :isFrom :UnitedKingdom ;
                  :isPassengerType :FamilyLeisure ;
                  :isVerified :NotVerified ;
-                 rdfs:comment "The passenger that filled the Ryanair survey #0, from United Kingdom"@en ;
+                 rdfs:comment "The passenger that filled the Ryanair survey 0, from United Kingdom"@en ;
                  rdfs:label "PassengerRay0UK"@en .
 
 
@@ -707,7 +707,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
             :isRecommended "0"^^xsd:short ;
             :rating "1"^^xsd:unsignedShort ;
             :title "marred by inconveniences" ;
-            rdfs:comment "The review #0 from Qatar Airways"@en ;
+            rdfs:comment "The review 0 from Qatar Airways"@en ;
             rdfs:label "review0qat"@en .
 
 
@@ -719,7 +719,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
             :isRecommended "1"^^xsd:short ;
             :rating "10"^^xsd:unsignedShort ;
             :title "bang on time and smooth flights" ;
-            rdfs:comment "Review #0 from Ryanair"@en ;
+            rdfs:comment "Review 0 from Ryanair"@en ;
             rdfs:label "review0rya"@en .
 
 
@@ -731,7 +731,7 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
             :isRecommended "-1"^^xsd:short ;
             :rating "10"^^xsd:unsignedShort ;
             :title "I hope they update the A380" ;
-            rdfs:comment "The review #4 from Qatar Airways"@en ;
+            rdfs:comment "The review 3 from Qatar Airways"@en ;
             rdfs:label "review3qat"@en .
 
 
