@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/"
      xml:base="http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,7 +10,9 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating">
-        <rdfs:comment xml:lang="en">This ontology is related to flight satisfaction surveys. Its data is extracted from Kaggle and the companies Qatar Airways and Ryanair. This is a practice exercice for Knowladge Representation subject (Universitat Oberta de Catalunya).</rdfs:comment>
+        <dc:description xml:lang="en">This ontology is related to flight satisfaction surveys. Its data is extracted from Kaggle and the companies Qatar Airways and Ryanair. This is a practice exercice for Knowladge Representation subject (Universitat Oberta de Catalunya).</dc:description>
+        <dc:rights rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://opensource.org/license/gpl-3-0</dc:rights>
+        <dc:title xml:lang="en">Airline Rating</dc:title>
     </owl:Ontology>
     
 
@@ -22,6 +25,24 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/rights -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/rights"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
