@@ -1,5 +1,6 @@
 @prefix : <http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix ns: <http://creativecommons.org/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
@@ -11,17 +12,14 @@
 @base <http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating/> .
 
 <http://www.semanticweb.org/alex/ontologies/2024/3/airline-rating> rdf:type owl:Ontology ;
-                                                                    <http://creativecommons.org/ns#license> "http://gnu.org/licenses/gpl-3.0.html" ;
                                                                     dc:description "This ontology is related to flight satisfaction surveys. Its data is extracted from Kaggle and the companies Qatar Airways and Ryanair. This is a practice exercice for Knowladge Representation subject (Universitat Oberta de Catalunya)."@en ;
-                                                                    dc:title "Airline Rating"@en .
+                                                                    dc:title "Airline Rating"@en ;
+                                                                    terms:license "http://gnu.org/licenses/gpl-3.0.html" ;
+                                                                    <http://schema.org/codeRepository> "https://github.com/alexgrauroca/uoc-rc-pac2-ontology" .
 
 #################################################################
 #    Annotation properties
 #################################################################
-
-###  http://creativecommons.org/ns#license
-<http://creativecommons.org/ns#license> rdf:type owl:AnnotationProperty .
-
 
 ###  http://purl.org/dc/elements/1.1/description
 dc:description rdf:type owl:AnnotationProperty .
@@ -33,6 +31,10 @@ dc:title rdf:type owl:AnnotationProperty .
 
 ###  http://purl.org/dc/terms/license
 terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://schema.org/codeRepository
+<http://schema.org/codeRepository> rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2000/01/rdf-schema#sameAs
@@ -1028,6 +1030,85 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
 [ rdf:type swrl:Imp ;
    swrl:body [ rdf:type swrl:AtomList ;
                rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Passenger ;
+                           swrl:argument1 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                      swrl:propertyPredicate :hasAnswered ;
+                                      swrl:argument1 <urn:swrl:var#p> ;
+                                      swrl:argument2 <urn:swrl:var#a>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                 swrl:propertyPredicate :rating ;
+                                                 swrl:argument1 <urn:swrl:var#a> ;
+                                                 swrl:argument2 <urn:swrl:var#r>
+                                               ] ;
+                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                            swrl:builtin swrlb:lessThan ;
+                                                            swrl:arguments [ rdf:type rdf:List ;
+                                                                             rdf:first <urn:swrl:var#r> ;
+                                                                             rdf:rest [ rdf:type rdf:List ;
+                                                                                        rdf:first 5 ;
+                                                                                        rdf:rest rdf:nil
+                                                                                      ]
+                                                                           ]
+                                                          ] ;
+                                                rdf:rest rdf:nil
+                                              ]
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :NotSatisfiedPassenger ;
+                           swrl:argument1 <urn:swrl:var#p>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :Review ;
+                           swrl:argument1 <urn:swrl:var#o>
+                         ] ;
+               rdf:rest [ rdf:type swrl:AtomList ;
+                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                      swrl:propertyPredicate :isRecommended ;
+                                      swrl:argument1 <urn:swrl:var#o> ;
+                                      swrl:argument2 <urn:swrl:var#r>
+                                    ] ;
+                          rdf:rest [ rdf:type swrl:AtomList ;
+                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                 swrl:builtin swrlb:equal ;
+                                                 swrl:arguments [ rdf:type rdf:List ;
+                                                                  rdf:first <urn:swrl:var#r> ;
+                                                                  rdf:rest [ rdf:type rdf:List ;
+                                                                             rdf:first -1 ;
+                                                                             rdf:rest rdf:nil
+                                                                           ]
+                                                                ]
+                                               ] ;
+                                     rdf:rest rdf:nil
+                                   ]
+                        ]
+             ] ;
+   swrl:head [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
+                           swrl:classPredicate :RecomendationUnknown ;
+                           swrl:argument1 <urn:swrl:var#o>
+                         ] ;
+               rdf:rest rdf:nil
+             ]
+ ] .
+
+[ rdf:type swrl:Imp ;
+   swrl:body [ rdf:type swrl:AtomList ;
+               rdf:first [ rdf:type swrl:ClassAtom ;
                            swrl:classPredicate :Review ;
                            swrl:argument1 <urn:swrl:var#o>
                          ] ;
@@ -1207,85 +1288,6 @@ rdfs:sameAs rdf:type owl:AnnotationProperty .
                rdf:first [ rdf:type swrl:ClassAtom ;
                            swrl:classPredicate :SatisfiedPassenger ;
                            swrl:argument1 <urn:swrl:var#p>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
- ] .
-
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :Passenger ;
-                           swrl:argument1 <urn:swrl:var#p>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                      swrl:propertyPredicate :hasAnswered ;
-                                      swrl:argument1 <urn:swrl:var#p> ;
-                                      swrl:argument2 <urn:swrl:var#a>
-                                    ] ;
-                          rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                 swrl:propertyPredicate :rating ;
-                                                 swrl:argument1 <urn:swrl:var#a> ;
-                                                 swrl:argument2 <urn:swrl:var#r>
-                                               ] ;
-                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                            swrl:builtin swrlb:lessThan ;
-                                                            swrl:arguments [ rdf:type rdf:List ;
-                                                                             rdf:first <urn:swrl:var#r> ;
-                                                                             rdf:rest [ rdf:type rdf:List ;
-                                                                                        rdf:first 5 ;
-                                                                                        rdf:rest rdf:nil
-                                                                                      ]
-                                                                           ]
-                                                          ] ;
-                                                rdf:rest rdf:nil
-                                              ]
-                                   ]
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :NotSatisfiedPassenger ;
-                           swrl:argument1 <urn:swrl:var#p>
-                         ] ;
-               rdf:rest rdf:nil
-             ]
- ] .
-
-[ rdf:type swrl:Imp ;
-   swrl:body [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :Review ;
-                           swrl:argument1 <urn:swrl:var#o>
-                         ] ;
-               rdf:rest [ rdf:type swrl:AtomList ;
-                          rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                      swrl:propertyPredicate :isRecommended ;
-                                      swrl:argument1 <urn:swrl:var#o> ;
-                                      swrl:argument2 <urn:swrl:var#r>
-                                    ] ;
-                          rdf:rest [ rdf:type swrl:AtomList ;
-                                     rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                 swrl:builtin swrlb:equal ;
-                                                 swrl:arguments [ rdf:type rdf:List ;
-                                                                  rdf:first <urn:swrl:var#r> ;
-                                                                  rdf:rest [ rdf:type rdf:List ;
-                                                                             rdf:first -1 ;
-                                                                             rdf:rest rdf:nil
-                                                                           ]
-                                                                ]
-                                               ] ;
-                                     rdf:rest rdf:nil
-                                   ]
-                        ]
-             ] ;
-   swrl:head [ rdf:type swrl:AtomList ;
-               rdf:first [ rdf:type swrl:ClassAtom ;
-                           swrl:classPredicate :RecomendationUnknown ;
-                           swrl:argument1 <urn:swrl:var#o>
                          ] ;
                rdf:rest rdf:nil
              ]
